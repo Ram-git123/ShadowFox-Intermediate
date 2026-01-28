@@ -19,7 +19,7 @@ An end-to-end Machine Learning web application that predicts loan eligibility us
 ## 🚀 How to Run
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/Loan-Approval-Master.git](https://github.com/YOUR_USERNAME/Loan-Approval-Master.git)
+   git clone gh repo clone Ram-git123/ShadowFox-Intermediate
    cd Loan-Approval-Master
 
 ```
