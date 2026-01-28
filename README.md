@@ -19,7 +19,7 @@ An end-to-end Machine Learning web application that predicts loan eligibility us
 ## 🚀 How to Run
 1. **Clone the repo:**
    ```bash
-   git clone gh repo clone Ram-git123/ShadowFox-Intermediate
+   gh repo clone Ram-git123/ShadowFox-Intermediate
    cd Loan-Approval-Master
 
 ```
@@ -40,6 +40,7 @@ python app/main.py
 
 4. **Access:** Open `http://127.0.0.1:5000` in your browser.
 
+
 ## 📁 Project Structure
 
 * `app/`: Flask application logic and templates.
@@ -47,17 +48,11 @@ python app/main.py
 * `models/`: Pickled ML models and encoders.
 * `data/`: Dataset used for training.
 
-```
-
----
-
-### 3. Final Folder Clean-up
+###  3. Final Folder Clean-up
 Before running `git push`, make sure your folder structure is clean:
 1.  **Delete any `__pycache__` folders** (they just clutter the repo).
 2.  **Ensure all 5 `.pkl` files** are inside the `models/` folder.
 3.  **Ensure `preprocessing.py`** is inside the `src/` folder.
-
----
 
 ### 4. GitHub Commands
 Open your terminal in the root folder and run these:
@@ -67,7 +62,7 @@ git init
 git add .
 git commit -m "Initial Commit: Master Level Loan Approval System with Smart Advisor"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git remote add origin https://github.com/Ram-git123/ShadowFox-Intermediate.git
 git push -u origin main
 
 ```
