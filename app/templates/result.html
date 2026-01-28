@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result | LendWise AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #1a2a6c, #b21f1f, #fdbb2d);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .status-icon { font-size: 80px; margin-bottom: 20px; }
+        .score-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            display: inline-block;
+        }
+        .advice-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid #0dcaf0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 25px;
+        }
+        .dti-pill {
+            background: #ffc107;
+            color: #000;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-10">
+                <div class="result-card animate__animated animate__zoomIn">
+                    
+                    {% if status == "APPROVED" %}
+                        <div class="status-icon text-success animate__animated animate__bounceIn">✔️</div>
+                        <h1 class="display-4 fw-bold text-success">APPROVED</h1>
+                        <p class="lead">Congratulations! Your loan application meets our AI criteria.</p>
+                    {% else %}
+                        <div class="status-icon text-danger animate__animated animate__shakeX">❌</div>
+                        <h1 class="display-4 fw-bold text-danger">DECLINED</h1>
+                        <p class="lead">Our AI risk assessment cannot approve this loan at this time.</p>
+                    {% endif %}
+
+                    <div class="mt-3">
+                        <span class="score-badge mb-2">System Confidence: {{ score }}%</span>
+                        <br>
+                        <span class="dti-pill">Debt-to-Income: {{ dti }}%</span>
+                    </div>
+
+                    <div class="advice-box animate__animated animate__fadeInUp animate__delay-1s">
+                        <h6 class="text-info fw-bold mb-2">💡 AI ADVISOR INSIGHT:</h6>
+                        <p class="mb-0 small" style="line-height: 1.6;">{{ advice }}</p>
+                    </div>
+
+                    <hr class="my-5 opacity-25">
+                    <a href="/" class="btn btn-outline-light px-5 py-3 rounded-pill fw-bold">PROCESS NEW APPLICATION</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
