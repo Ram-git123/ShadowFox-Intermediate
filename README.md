@@ -21,10 +21,10 @@ An end-to-end Machine Learning web application that predicts loan eligibility us
    ```bash
    gh repo clone Ram-git123/ShadowFox-Intermediate
    cd Loan-Approval-Master
-
-```
+   ```
 
 2. **Install Dependencies:**
+
 ```bash
 pip install -r requirements.txt
 
